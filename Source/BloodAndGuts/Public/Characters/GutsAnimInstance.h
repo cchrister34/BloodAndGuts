@@ -13,5 +13,18 @@ UCLASS()
 class BLOODANDGUTS_API UGutsAnimInstance : public UAnimInstance
 {
 	GENERATED_BODY()
+public:
+	virtual void NativeInitializeAnimation() override;
+	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
+
+	UPROPERTY(BlueprintReadWrite)
+	class ABloodAndGutsCharacter* BloodAndGutsCharacter;
+
+	UPROPERTY(BlueprintReadWrite, Category = Movement)
+	class UCharacterMovementComponent* GutsMovement;
+
+	UPROPERTY(BlueprintReadWrite, Category = Movement)
+	float GroundSpeed;
+	
 	
 };
