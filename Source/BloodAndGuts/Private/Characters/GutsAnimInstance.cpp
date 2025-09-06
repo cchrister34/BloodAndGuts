@@ -26,5 +26,6 @@ void UGutsAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	if (GutsMovement)
 	{
 		GroundSpeed = UKismetMathLibrary::VSizeXY(GutsMovement->Velocity);
+		isFalling = GutsMovement->IsFalling();
 	}
 }

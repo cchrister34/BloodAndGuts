@@ -95,7 +95,7 @@ void ABloodAndGutsCharacter::SetupPlayerInputComponent(UInputComponent* PlayerIn
 	{
 		EnhancedInputComponent->BindAction(BloodAndGutsInputAction, ETriggerEvent::Triggered, this, &ABloodAndGutsCharacter::Move);
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABloodAndGutsCharacter::Look);
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Triggered, this, &ABloodAndGutsCharacter::Jump);
+		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ABloodAndGutsCharacter::Jump);
 		EnhancedInputComponent->BindAction(EkeyAction, ETriggerEvent::Triggered, this, &ABloodAndGutsCharacter::EkeyPressed);
 		EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Triggered, this, &ABloodAndGutsCharacter::Attack);
 		EnhancedInputComponent->BindAction(DodgeAction, ETriggerEvent::Triggered, this, &ABloodAndGutsCharacter::Dodge);

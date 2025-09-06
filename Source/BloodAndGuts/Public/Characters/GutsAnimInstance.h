@@ -26,5 +26,8 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = Movement)
 	float GroundSpeed;
 	
+	UPROPERTY(BlueprintReadWrite, Category = Movement)
+	bool isFalling;
+	
 	
 };
